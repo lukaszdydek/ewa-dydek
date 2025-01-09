@@ -6,7 +6,7 @@
 
 
 body {   
-    background: url('background.jpg');
+    background: hsl(56, 100%, 32%);
     margin: 0;
 
 }
