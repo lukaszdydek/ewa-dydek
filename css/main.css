@@ -1,79 +1,199 @@
+/* Import czcionek*/
+
 @import url('https://fonts.googleapis.com/css?family=McLaren|Titillium+Web&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 
-
-
+/* Główne selektory*/
 
 body {   
-    background: hsl(180, 75%, 55%);
+    background: #FAF2C9;
+    color: #1E1E24;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-
+    padding: 0 20%;
 }
 
-.general_wrapper {
-    display: flex;
-    flex-direction: row;
-}
-
-.setting_menu {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 8px;
-    min-width: 20vw;
-    height: 110%;
-    position: fixed;
-    left: -18%;
-    background-color: hsla(190, 80%, 10%, 0.6);
-    font-family: 'Nunito', sans-serif;
+p {
     font-size: 1.2em;
-    transition: 0.8s ease;
+}
+
+a {
+    text-decoration: none;
+    color: #8B728E
+}
+
+menu a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid #E4572E;
+}
+
+a:visited {
+    color: black;
+}
+
+/* Selektory headera*/
+
+.header {
+    display: grid;
+    position: sticky;
+    top: 0;
+    padding: 1em 0;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 0.5fr 4fr 2fr;
+    background: #FAF2C9;
+}
+
+.header-photo img {
+border-radius: 50%;
+width: auto;
+height: 70px;
+}
+
+menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+menu li {
+    padding: 27px 2em;
+}
+
+.header-contact li {
+text-align: right;
+list-style: none;
+color: #1E1E24;
+}
+
+/* Koła ozdobne*/
+
+#wheel1 {
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    position: absolute;
+    top: 400px;
+    right: 45%;
+    border-radius: 50%;
+    background-color: rgba(228, 87, 46, 0.2);
+
+}
+
+#wheel2 {
+    width: 400px;
+    height: 400px;
+    z-index: -1;
+    position: absolute;
+    top: 160px;
+    right: 45%;
+    border-radius: 50%;
+    background-color: rgba(139, 114, 142, 0.2)
+
+}
+
+#wheel3 {
+    width: 150px;
+    height: 150px;
+    z-index: -1;
+    position: absolute;
+    top: 160px;
+    right: 45%;
+    border-radius: 50%;
+    background-color: rgba(228, 87, 46, 0.2)
+
+}
+
+#wheel4 {
+    width: 250px;
+    height: 250px;
+    z-index: -1;
+    position: absolute;
+    top: 220px;
+    right: 65%;
+    border-radius: 50%;
+    background-color: rgba(139, 114, 142, 0.2)
+
+}
+
+/* Selektroy sekcji wprowadzającej*/
+
+.leading-section {
+    display: flex;
+    flex-basis: row;
+    margin: 5vh 0 10vh 0;
+    padding: 0 2em 0 0;
+}
+
+.introduction {
+   max-width: 60%;   
+}
+
+.cta-button {
+    width: 40%;
+    padding: 1em 1em;
+    background-color: #E4572E;
+    border: 4px solid #E4572E;
+    color: white;
+    border-radius: 12px;
+    font-size: 1.4em;
+    margin-right: 5%;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: #1E1E24;
+    transition: ease-out 0.7s;
+}
+
+.contact-button {
+    width: 40%;
+    padding: 1em 1em;
+    background-color: transparent;
+    border: 4px solid #E4572E;
+    border-radius: 12px;
+    font-size: 1.4em;
+}
+
+
+.contact-button:hover {
+    background-color: #8B728E;
+    border: 4px solid #8B728E;
+    color: white;
+    transition: ease-out 0.7s;
+}
+
+/* Selektory sekcji głównej*/
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-content div {
     
 }
 
-.setting_menu__hovered {
-    left: 0;
-    transition: 0.8s ease;
+.main-content img {
+    width: 90%;
+    height: auto;
+    border-radius: 12px;
 }
 
-.setting_menu__heading {
-    display: flex;
-    flex-direction: row;  
+h1 span {
+    color: #FF7F11;
 }
 
-.setting_menu--icon {
-    width: 32px;
-    height:32px;
-}
-
-.wrapper {
-    display: grid;
-    text-align: center;
-    padding: 12px;
-    margin: auto;
-    width: 100%;
+h2 {
+    color: #8B728E;
 }
 
 
+
+/* Sekcja dla mobilek*/
 
 @media screen and (max-width: 768px) {
 
-    .setting_menu {
-        min-width: 40vw;
-        left: -30%;
-        background-color: rgba(255, 127, 80);
-        z-index: 2;
-    }
-
-    .setting_menu__hovered {
-        left: 0;
-       
-    }
-
-    .wrapper {
-        position: relative;
-        left: 3.8vw;
-    }
 
 }
